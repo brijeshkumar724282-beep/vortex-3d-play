@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vortex Play | Playful 3D Parallax Playground</title>
+<meta name="description" content="Vortex Play is a playful 3D parallax playground with swirling particles floating shapes and smooth scroll motion.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="progressWrap" aria-hidden="true"><div class="progressBar" id="progressBar"></div></div>
+
+<header class="navPill" id="navPill">
+  <a class="brand" href="#top" data-scroll>
+    <span class="brandMark" aria-hidden="true"></span>
+    <span class="brandText">Vortex Play</span>
+  </a>
+  <nav class="navLinks" id="navLinks" aria-label="Primary">
+    <a href="#playground" data-scroll>Playground</a>
+    <a href="#services" data-scroll>Services</a>
+    <a href="#process" data-scroll>Process</a>
+    <a href="#stories" data-scroll>Stories</a>
+    <a href="#contact" data-scroll>Contact</a>
+  </nav>
+  <div class="navActions">
+    <a href="#contact" class="btn btnSmall btnCoral magnetic" data-scroll>Start Playing</a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <canvas id="vortexCanvas" aria-label="Swirling particle vortex that reacts to pointer movement"></canvas>
+    <div class="shapeLayer" aria-hidden="true">
+      <div class="shape shapeCoralBall" data-depth="0.06"></div>
+      <div class="shape shapeTealCube" data-depth="0.11"></div>
+      <div class="shape shapeInkRing" data-depth="0.08"></div>
+      <div class="shape shapeCreamPill" data-depth="0.14"></div>
+      <div class="shape shapeTealDot" data-depth="0.18"></div>
+      <div class="shape shapeCoralTri" data-depth="0.05"></div>
+    </div>
+    <div class="heroInner">
+      <p class="eyebrow heroEyebrow">Interactive motion playground</p>
+      <h1 class="heroTitle">Dive Into A Playground That Moves With You</h1>
+      <p class="heroCopy">Vortex Play is a tactile 3D space where particles shapes and stories swirl around your cursor. Scroll to feel every layer drift.</p>
+      <div class="heroCtas">
+        <a href="#playground" class="btn btnCoral magnetic" data-scroll>Start Playing</a>
+        <a href="#process" class="btn btnGhost magnetic" data-scroll>See The Motion</a>
+      </div>
+      <div class="heroMeta">
+        <div><strong data-count="120">0</strong><span>Worlds Built</span></div>
+        <div><strong data-count="98">0</strong><span>Percent Smiles</span></div>
+        <div><strong data-count="12">0</strong><span>Design Wins</span></div>
+      </div>
+    </div>
+    <a class="scrollHint" href="#playground" data-scroll>Scroll to explore<span aria-hidden="true"></span></a>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marqueeTrack">
+      <span>PLAY • DEPTH • MOTION • COLOR • JOY • CURVE • SWIRL • BOUNCE • PLAY • DEPTH • MOTION • COLOR • JOY • CURVE • SWIRL • BOUNCE •&nbsp;</span>
+      <span>PLAY • DEPTH • MOTION • COLOR • JOY • CURVE • SWIRL • BOUNCE • PLAY • DEPTH • MOTION • COLOR • JOY • CURVE • SWIRL • BOUNCE •&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- GALLERY -->
+  <section class="section gallery" id="playground">
+    <div class="sectionHead reveal">
+      <p class="eyebrow">The Playground</p>
+      <h2>Six Layers That Float At New Speeds</h2>
+      <p class="sectionCopy">Each card drifts at its own pace as you scroll. Hover to tilt. Every shade is flat and bold.</p>
+    </div>
+    <div class="galleryGrid">
+      <article class="gcard gCoral revealTilt" data-speed="0.15" data-tilt>
+        <p class="gTag">Speed 0.15</p>
+        <h3>Coral Drift</h3>
+        <p>A bold stage for hero stories and bright ideas that love attention.</p>
+        <div class="gOrb" aria-hidden="true"></div>
+      </article>
+      <article class="gcard gTeal revealTilt" data-speed="0.35" data-tilt>
+        <p class="gTag">Speed 0.35</p>
+        <h3>Teal Flow</h3>
+        <p>Calm motion for product tours and gentle visual rhythm.</p>
+        <div class="gBar" aria-hidden="true"><i></i><i></i><i></i></div>
+      </article>
+      <article class="gcard gInk revealTilt" data-speed="0.6" data-tilt>
+        <p class="gTag">Speed 0.6</p>
+        <h3>Ink Depth</h3>
+        <p>Dark canvas that makes color pop and type read crisp.</p>
+        <div class="gDots" aria-hidden="true"><i></i><i></i><i></i></div>
+      </article>
+      <article class="gcard gCream revealTilt" data-speed="0.9" data-tilt>
+        <p class="gTag">Speed 0.9</p>
+        <h3>Cream Air</h3>
+        <p>Soft breathing room that lets playful shapes shine.</p>
+        <div class="gRing" aria-hidden="true"></div>
+      </article>
+      <article class="gcard gCoralDeep revealTilt" data-speed="1.15" data-tilt>
+        <p class="gTag">Speed 1.15</p>
+        <h3>Bounce Lab</h3>
+        <p>Test playful jumps pops and spins in a safe sandbox.</p>
+        <div class="gStack" aria-hidden="true"><i></i><i></i></div>
+      </article>
+      <article class="gcard gTealDeep revealTilt" data-speed="1.4" data-tilt>
+        <p class="gTag">Speed 1.4</p>
+        <h3>Swirl Club</h3>
+        <p>A swirling finale for calls to action and happy endings.</p>
+        <div class="gSwirl" aria-hidden="true"></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section services" id="services">
+    <div class="sectionHead reveal">
+      <p class="eyebrow">What We Build</p>
+      <h2>Services Made For Playful Brands</h2>
+      <p class="sectionCopy">Solid color tactile depth and motion with purpose. No noise only joy.</p>
+    </div>
+    <div class="serviceGrid">
+      <article class="scard reveal">
+        <div class="sIcon sIconCoral" aria-hidden="true"></div>
+        <h3>3D Web Scenes</h3>
+        <p>Particle fields floating shapes and scroll linked camera moves built for speed.</p>
+        <ul>
+          <li>Particle vortex</li>
+          <li>Floating shapes</li>
+          <li>Scroll cameras</li>
+        </ul>
+      </article>
+      <article class="scard reveal">
+        <div class="sIcon sIconTeal" aria-hidden="true"></div>
+        <h3>Motion Systems</h3>
+        <p>Intro timelines scroll reveals magnetic buttons and marquees with one voice.</p>
+        <ul>
+          <li>Intro timelines</li>
+          <li>Scroll reveals</li>
+          <li>Magnetic buttons</li>
+        </ul>
+      </article>
+      <article class="scard reveal">
+        <div class="sIcon sIconInk" aria-hidden="true"></div>
+        <h3>Playful Identity</h3>
+        <p>Type color and layout that feel joyful on every screen size.</p>
+        <ul>
+          <li>Bold type</li>
+          <li>Flat color</li>
+          <li>Joyful layout</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- PROCESS + STATS -->
+  <section class="section process" id="process">
+    <div class="sectionHead reveal">
+      <p class="eyebrow">How We Work</p>
+      <h2>From Sketch To Swirl In Four Moves</h2>
+    </div>
+    <div class="steps">
+      <article class="step reveal">
+        <span class="stepNum">01</span>
+        <div><h3>Imagine</h3><p>We map story beats and pick the layers that will carry them.</p></div>
+      </article>
+      <article class="step reveal">
+        <span class="stepNum">02</span>
+        <div><h3>Prototype</h3><p>Quick clay models of motion you can click through early.</p></div>
+      </article>
+      <article class="step reveal">
+        <span class="stepNum">03</span>
+        <div><h3>Build</h3><p>Clean code with capped pixels and smooth scroll baked in.</p></div>
+      </article>
+      <article class="step reveal">
+        <span class="stepNum">04</span>
+        <div><h3>Polish</h3><p>Testing on small and large screens plus calm mode for all.</p></div>
+      </article>
+    </div>
+    <div class="stats reveal">
+      <div class="stat"><strong><span data-count="240">0</span>+</strong><span>Scenes Shipped</span></div>
+      <div class="stat"><strong><span data-count="98">0</span>%</strong><span>Happy Clients</span></div>
+      <div class="stat"><strong><span data-count="15">0</span></strong><span>Motion Awards</span></div>
+      <div class="stat"><strong><span data-count="6">0</span>y</strong><span>Playing Daily</span></div>
+    </div>
+  </section>
+
+  <!-- STORIES -->
+  <section class="section stories" id="stories">
+    <div class="sectionHead reveal">
+      <p class="eyebrow">Stories</p>
+      <h2>Loved By Teams Who Love Motion</h2>
+    </div>
+    <div class="slider reveal" id="slider">
+      <div class="slides" id="slides">
+        <figure class="slide isActive">
+          <blockquote>Vortex turned our launch page into a toy our visitors refuse to close. Scroll feels alive.</blockquote>
+          <figcaption><span class="avatar aCoral" aria-hidden="true">M</span><span><strong>Maya R</strong><em>Product Lead at Lumen</em></span></figcaption>
+        </figure>
+        <figure class="slide">
+          <blockquote>Every section floats. Our demo time tripled and support tickets melted away.</blockquote>
+          <figcaption><span class="avatar aTeal" aria-hidden="true">J</span><span><strong>Jonas K</strong><em>Founder at Fieldnote</em></span></figcaption>
+        </figure>
+        <figure class="slide">
+          <blockquote>Fast playful and solid on phones. The motion respects calm settings which our users adore.</blockquote>
+          <figcaption><span class="avatar aInk" aria-hidden="true">P</span><span><strong>Priya S</strong><em>Design Head at Bloomly</em></span></figcaption>
+        </figure>
+      </div>
+      <div class="sliderNav">
+        <button class="btn btnGhost btnSmall" id="prevBtn" type="button">Prev</button>
+        <div class="dots" id="dots" role="tablist" aria-label="Choose story"></div>
+        <button class="btn btnGhost btnSmall" id="nextBtn" type="button">Next</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <div class="contactGrid">
+      <div class="reveal">
+        <p class="eyebrow">Say Hello</p>
+        <h2>Tell Us About Your Idea</h2>
+        <p class="sectionCopy">Share a few lines. We reply within two working days.</p>
+        <ul class="contactPoints">
+          <li><span aria-hidden="true">●</span> Flat rate playful builds</li>
+          <li><span aria-hidden="true">●</span> Motion that respects calm mode</li>
+          <li><span aria-hidden="true">●</span> Live preview in days</li>
+        </ul>
+      </div>
+      <form class="form reveal" id="contactForm" novalidate>
+        <div class="field">
+          <label for="fName">Your Name</label>
+          <input id="fName" name="name" type="text" placeholder="Ada Lovelace" autocomplete="name">
+          <small class="err" data-err="fName"></small>
+        </div>
+        <div class="field">
+          <label for="fEmail">Email Address</label>
+          <input id="fEmail" name="email" type="email" placeholder="ada@example.com" autocomplete="email">
+          <small class="err" data-err="fEmail"></small>
+        </div>
+        <div class="field">
+          <label for="fType">Project Type</label>
+          <select id="fType" name="type">
+            <option value="playful">Playful Website</option>
+            <option value="scene">3D Scene</option>
+            <option value="refresh">Motion Refresh</option>
+            <option value="other">Something Else</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="fMsg">Your Message</label>
+          <textarea id="fMsg" name="message" rows="4" placeholder="Tell us about colors mood and launch timing"></textarea>
+          <small class="err" data-err="fMsg"></small>
+        </div>
+        <button class="btn btnCoral magnetic" type="submit">Send Message</button>
+        <p class="formOk" id="formOk" role="status">Thanks. Your note is on its way. We will reply soon.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footGrid">
+    <div>
+      <p class="brandText">Vortex Play</p>
+      <p class="footCopy">A playful 3D parallax playground built with care.</p>
+    </div>
+    <nav aria-label="Explore">
+      <p class="footTitle">Explore</p>
+      <a href="#playground" data-scroll>Playground</a>
+      <a href="#services" data-scroll>Services</a>
+      <a href="#process" data-scroll>Process</a>
+    </nav>
+    <nav aria-label="Studio">
+      <p class="footTitle">Studio</p>
+      <a href="#stories" data-scroll>Stories</a>
+      <a href="#contact" data-scroll>Contact</a>
+      <a href="#top" data-scroll>Top Of Page</a>
+    </nav>
+    <div>
+      <p class="footTitle">Follow</p>
+      <a href="#top" data-scroll>X</a>
+      <a href="#top" data-scroll>Instagram</a>
+      <a href="#top" data-scroll>Dribbble</a>
+    </div>
+  </div>
+  <div class="footBase">
+    <p>© 2026 Vortex Play. All rights reserved.</p>
+    <p>Crafted with solid color and smooth motion.</p>
+    <button class="btn btnInk btnSmall magnetic" id="toTop" type="button">Back To Top</button>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
